@@ -27,6 +27,7 @@ import { createThirdwebClient } from "thirdweb";
 import { ethereum, defineChain, bsc } from "thirdweb/chains";
 import { ThirdwebProvider, ConnectButton, useActiveAccount } from "thirdweb/react";
 import { createWallet } from "thirdweb/wallets";
+import PrintButton from './test_third_web.tsx';
 
 const client = createThirdwebClient({ clientId: "86c3b16a19c7a5887ff4226b0c38c9d0", secretKey: "SEoMOkc3ag7KlkXxhUhI4EYwmTf9Z0a8ws1GU_9YkW1sRjGOtWI5ius9qa13OjHTZ14-RiqyBkKWgAo4piymuA" });
 
@@ -61,7 +62,12 @@ export default function App() {
         showAllWallets={false}
         chains={[bsc, ethereum]}
       />
+      <div style={{ padding: '20px' }}>
+        <h1>Hello, React + TypeScript!</h1>
+        <PrintButton />
+      </div>
     </ThirdwebProvider>
+
   );
 }
 

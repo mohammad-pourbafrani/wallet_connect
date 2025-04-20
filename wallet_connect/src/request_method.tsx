@@ -6,11 +6,14 @@ const client = createThirdwebClient({ clientId: "86c3b16a19c7a5887ff4226b0c38c9d
 const contractABI = require('./stake_abi.json');
 const myContract = getContract({
   client,
-  address: "...",
+  address: "0xf01a65f0ca8c3a9703cfab5b442956f1d6b9c515",
   chain: ethereum,
   abi: contractABI
 });
-const abi = await resolveContractAbi(myContract).;
+// const test = await myContract.call("getPlans");
+// console.log(test);
+
+// const abi = await resolveContractAbi(myContract).;
 
 // const { data, isLoading } = useReadContract({
 //     abi,
@@ -18,4 +21,4 @@ const abi = await resolveContractAbi(myContract).;
 //     params: [1n],
 //   });
 
-const res = await  myContract.
+// const res = await  myContract.
